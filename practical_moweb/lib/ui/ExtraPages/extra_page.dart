@@ -53,68 +53,122 @@ class _ExtraPageState extends State<ExtraPage> {
                 ),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Stack(
+              alignment: Alignment.center,
               children: [
-                GridTile(
-                    child: Column(
-                  children: const [
-                    Icon(Icons.assignment_outlined,
-                        size: 100, color: Colors.blueGrey),
-                    Text("Preparation",
-                        style: TextStyle(color: Colors.black, fontSize: 20))
+                Container(
+                    height: MediaQuery.of(context).size.height / 1.5,
+                    width: 3,
+                    decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                          Colors.white,
+                          Colors.orange,
+                          Colors.orange,
+                          Colors.white
+                        ]))),
+                Positioned(
+                  top: 50.0,
+                  left: 1,
+                  right: 1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      GridTile(
+                          child: Column(
+                        children: const [
+                          Icon(Icons.assignment_outlined,
+                              size: 100, color: Colors.blueGrey),
+                          Text("Preparation",
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 20))
+                        ],
+                      )),
+                      GridTile(
+                          child: Column(
+                        children: const [
+                          Icon(Icons.local_hospital_outlined,
+                              size: 100, color: Colors.red),
+                          Text("Operation \nRoom",
+                              textAlign: TextAlign.center,
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 20))
+                        ],
+                      ))
+                    ],
+                  ),
+                ),
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Container(
+                        height: 3,
+                        width: MediaQuery.of(context).size.width / 1.1,
+                        decoration: const BoxDecoration(
+                            gradient: LinearGradient(colors: [
+                          Colors.white,
+                          Colors.orange,
+                          Colors.orange,
+                          Colors.white
+                        ]))),
+                    Container(
+                      height: MediaQuery.of(context).size.height / 5,
+                      width: MediaQuery.of(context).size.width / 2.5,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(100)),
+                        border: Border.all(color: Colors.orange, width: 3),
+                        boxShadow: const [
+                          BoxShadow(blurRadius: 90.0, color: Color(0xFFFFCC80)),
+                        ],
+                      ),
+                      child: GridTile(
+                          child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.view_week_outlined,
+                              size: 70, color: Colors.red),
+                          Text("Equipment",
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 18))
+                        ],
+                      )),
+                    ),
                   ],
-                )),
-                GridTile(
-                    child: Column(
-                  children: const [
-                    Icon(Icons.local_hospital_outlined,
-                        size: 100, color: Colors.red),
-                    Text("Operation Room",
-                        style: TextStyle(color: Colors.black, fontSize: 20))
-                  ],
-                ))
-              ],
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height / 5,
-              width: MediaQuery.of(context).size.width / 2.5,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: const BorderRadius.all(Radius.circular(100)),
-                  border: Border.all(color: Colors.orange, width: 3)),
-              child: GridTile(
-                  child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(Icons.view_week_outlined,
-                      size: 70, color: Colors.red),
-                  Text("Equipment",
-                      style: TextStyle(color: Colors.black, fontSize: 18))
-                ],
-              )),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                GridTile(
-                    child: Column(
-                  children: const [
-                    Icon(Icons.bed, size: 100, color: Colors.blueAccent),
-                    Text("Patient \npositioning",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.black, fontSize: 20))
-                  ],
-                )),
-                GridTile(
-                    child: Column(
-                  children: const [
-                    Icon(Icons.speaker_notes_outlined,
-                        size: 100, color: Colors.deepOrangeAccent),
-                    Text("Notes",
-                        style: TextStyle(color: Colors.black, fontSize: 20))
-                  ],
-                ))
+                ),
+                Positioned(
+                  bottom: 35.0,
+                  left: 1,
+                  right: 1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      GridTile(
+                          child: Column(
+                        children: const [
+                          Icon(Icons.bed, size: 100, color: Colors.blueAccent),
+                          Text("Patient \npositioning",
+                              textAlign: TextAlign.center,
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 20))
+                        ],
+                      )),
+                      GridTile(
+                          child: Column(
+                        children: const [
+                          Icon(Icons.speaker_notes_outlined,
+                              size: 100, color: Colors.deepOrangeAccent),
+                          Text("Notes",
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 20))
+                        ],
+                      ))
+                    ],
+                  ),
+                ),
               ],
             ),
             Container(

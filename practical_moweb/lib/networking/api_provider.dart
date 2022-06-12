@@ -29,6 +29,7 @@ class ApiProvider{
     }
     return responseJson;
   }
+
   Future<dynamic> get(String url) async {
 
     var responseJson;
@@ -47,6 +48,7 @@ class ApiProvider{
     }
     return responseJson;
   }
+
   Future<dynamic> delete(String url) async {
     var responseJson;
     try {
@@ -60,6 +62,7 @@ class ApiProvider{
     }
     return responseJson;
   }
+
   Future<dynamic> post(String url, var body) async {
     var responseJson;
     try {
@@ -78,6 +81,7 @@ class ApiProvider{
     }
     return responseJson;
   }
+
   Future<dynamic> put(String url,{var body}) async {
     var responseJson;
     var response;
@@ -104,6 +108,7 @@ class ApiProvider{
     }
     return responseJson;
   }
+
   dynamic _response(http.Response response) {
     print(response.statusCode);
     print(_uri);

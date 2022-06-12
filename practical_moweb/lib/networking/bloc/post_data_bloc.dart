@@ -10,12 +10,11 @@ class PostDataBloc {
   late StreamController postDataBlocController;
 
   StreamSink get dataSink => postDataBlocController.sink;
-
   Stream get stream => postDataBlocController.stream;
 
   PostDataBloc() {
-    postDataBlocController = StreamController();
     postDataRepository = PostDataRepository();
+    postDataBlocController = StreamController();
   }
 
   postDataBlocMethod(PostDataRequest request) async {

@@ -3,12 +3,10 @@ class CustomException implements Exception {
   final _prefix;
 
   CustomException([this._message, this._prefix]);
-
 }
 
 class FetchDataException extends CustomException {
-  FetchDataException([String? message])
-      : super(message,"");
+  FetchDataException([String? message]) : super(message, "");
 }
 
 class NoInternetException extends CustomException {
